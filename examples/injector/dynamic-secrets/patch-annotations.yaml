@@ -12,8 +12,9 @@ spec:
           {{- with secret "database/creds/db-app" -}}
           postgres://{{ .Data.username }}:{{ .Data.password }}@postgres.postgres.svc:5432/wizard?sslmode=disable
           {{- end }}
-        vault.hashicorp.com/agent-inject-command-db-creds: "sh -c 'kill -HUP $(pidof app)'"
+        vault.hashicorp.com/agent-inject-command-db-creds: "kill -HUP $(pidof app)"
         # VAULT SETTINGS
         vault.hashicorp.com/role: "app"
         vault.hashicorp.com/tls-secret: "tls-test-client"
         vault.hashicorp.com/ca-cert: "/vault/tls/ca.crt"
+        vault.hashicorp.com/log-level: "debug"

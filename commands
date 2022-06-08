@@ -1,0 +1,14 @@
+commands
+./setup.sh
+
+k get po -A -W
+
+kubectl exec --stdin=true --tty=true vault-0 -n vault -- /bin/sh
+cd tmp
+./bootstrap.sh 
+
+kubectl port-forward app-58db7dc86b-dvd2l -n app 8080:8080
+
+kubectl port-forward vault-0 -n vault 8200:8200
+
+hvs.zbNX9dVvZo9S2Zu3SWXaPO4p

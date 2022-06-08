@@ -39,15 +39,15 @@ vault write auth/kubernetes/role/app \
     bound_service_account_names=app \
     bound_service_account_namespaces=app \
     policies=app \
-    token_max_ttl=20m \
-    ttl=10m
+    token_max_ttl=2m \
+    ttl=1m
 
 vault write -namespace=demo auth/kubernetes/role/app \
     bound_service_account_names=app \
     bound_service_account_namespaces=app \
     policies=app \
-    token_max_ttl=20m \
-    ttl=10m
+    token_max_ttl=2m \
+    ttl=1m
 
 # Demo 1: Static Secrets
 vault secrets enable -path=secret/ kv
