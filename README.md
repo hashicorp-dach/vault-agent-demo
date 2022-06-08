@@ -12,7 +12,9 @@ Run the setup script that installs:
 * Vault CSI Provider
 * PostgreSQL (for example)
 
+:warning: kubectl needs to be available for this (for example Minikube `minikube start --driver=docker` or `minikube start --driver-virtualbox`)
 ```bash
+
 ./setup.sh
 ```
 
