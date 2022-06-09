@@ -2,6 +2,8 @@
 
 This demo requires `Helm V3` and `jq` to be installed.
 
+[Script: Jason O'Donnell - Vault & Kubernetes: Better Together](https://www.hashicorp.com/resources/vault-and-kubernetes-better-together)
+
 ## Demo
 
 Run the setup script that installs:
